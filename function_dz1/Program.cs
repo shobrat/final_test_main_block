@@ -6,7 +6,7 @@ int num = Convert.ToInt32(Console.ReadLine());
 
 
 
-static int FindSumNumbers(int num)
+static int CountSumNumbers(int num)
 {
     int sum = 0;
     int count = num.ToString().Length;
@@ -19,9 +19,35 @@ static int FindSumNumbers(int num)
     return sum;
 }
 
-int result = FindSumNumbers(num);
+int[] BreakEnterNumbers(int[] array)
+{
+    i=0;
+    while(true)
+    {
+        i++;
+        Console.WriteLine(i);
+    }
+}
+
+BreakEnterNumbers(num);
+
+int result = CountSumNumbers(num);
 
 Console.WriteLine($"{result}");
+
+
+static void Main(string[] args)
+        {
+            int i = 0;
+            for (; ; )
+            {
+                i++;
+                Console.WriteLine(i);
+                if (i==12345) break;
+            }
+            Console.ReadLine();
+        }
+
 
 
 // int BreakEnterNumbers(int num)
