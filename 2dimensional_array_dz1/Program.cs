@@ -25,43 +25,31 @@ class UserInputToCompileForTest
     // Поиск элемента по позициям
     public static int FindElementByPosition(int[,] array, int x, int y)
     {
-        for (int i = 0; i < array.GetLength(0); i++)
-        {
-            for (int j = 0; j < array.GetLength(1); j++)
-            {
-
-            }
-        }
-        return
-        //Напишите свое решение здесь
-    }
-    //создание рандомной матрицы
-    int[,] CreateMatrixRndInt(int rows, int columns, int min, int max)
-    {
-        //   0      1
-        int[,] matrix = new int[rows, columns];
-        Random rnd = new Random();
-
-        for (int i = 0; i < matrix.GetLength(0); i++)
-        {
-            for (int j = 0; j < matrix.GetLength(1); j++)
-            {
-                matrix[i, j] = rnd.Next(min, max);
-            }
-        }
-
-        return matrix;
+        return array[x - 1, y - 1];
     }
 
     // Проверка позиций на вхождение в массив
     public static bool ValidatePosition(int[,] array, int x, int y)
     {
-        //Напишите свое решение здесь
+        if (x <= 0 || x >= array.GetLength(0))
+        {
+            Console.WriteLine("Позиция по рядам выходит за пределы массива");
+            return false;
+        }
+        if (y <= 0 || y >= array.GetLength(1))
+        {
+            Console.WriteLine("Позиция по колонкам выходит за пределы массива");
+            return false;
+        }
+        return true;
     }
 
     public static void PrintResult(int[,] numbers, int x, int y)
     {
-        //Напишите свое решение здесь
+        if (ValidatePosition(numbers, x, y))
+        {
+            Console.WriteLine(FindElementByPosition(numbers, x, y));
+        }
     }
 }
 
