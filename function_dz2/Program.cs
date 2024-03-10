@@ -44,17 +44,28 @@ PrintArray(array);
 
 Console.WriteLine($" => {FindEvenNumbers(array)}");
 
-// Console.WriteLine("Введите целые числа");
-// int num = Convert.ToInt32(Console.ReadLine());
 
 
-// int sum = 0;
-// int count = num.ToString().Length;
-// for (int i = 0; i < count; i++)
+// using System;
+// class Program
 // {
-//     int del = num % 10;
-//     num = num / 10;
-//     sum = sum + del;
+// static void Main()
+// {
+// int[] numbers = new int[10]; // Массив для хранения случайных чисел
+// Random random = new Random(); // Генератор случайных чисел
+// int evenCount = 0; // Счетчик четных чисел
+// // Заполнение массива случайными трехзначными числами
+// for (int i = 0; i < numbers.Length; i++)
+// {
+// numbers[i] = random.Next(100, 1000); // Случайное число от 100 до 999
+// Console.Write(numbers[i] + " "); // Вывод сгенерированного числа
+// // Проверка на четность и увеличение счетчика
+// if (numbers[i] % 2 == 0)
+// {
+// evenCount++;
 // }
-
-// Console.WriteLine($"{num} {sum}");
+// }
+// // Вывод количества четных чисел в массиве
+// Console.WriteLine($"\nКоличество четных чисел в массиве: {evenCount}");
+// }
+// }
