@@ -30,7 +30,7 @@ public class FindStrings
                 index++;
             }
         }
-
+        
         // вывод
         Console.Write("[");
         for (int i = 0; i < newArray.Length; i++)
